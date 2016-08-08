@@ -35,6 +35,7 @@
 /web/css/
 /web/pdfs/*
 !/web/pdfs/.gitkeep
+/web/assetic/
 
 # Assets managed by Bower
 /web/assets/vendor/
