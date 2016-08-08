@@ -9,9 +9,9 @@ before_script:
   - cp app/config/parameters.yml.dist app/config/parameters.yml
   - composer selfupdate
   - composer install
-  - php app/console doctrine:databa:create --no-interaction --env=test
-  - php app/console doctrine:schema:create --no-interaction --env=test
-  - php app/console hautelook_alice:doctrine:fixtures:load --no-interaction --env=test
+#  - php app/console doctrine:databa:create --no-interaction --env=test
+#  - php app/console doctrine:schema:create --no-interaction --env=test
+#  - php app/console hautelook_alice:doctrine:fixtures:load --no-interaction --env=test
 
 script:
   - phpunit -c app
