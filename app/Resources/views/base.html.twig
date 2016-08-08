@@ -7,12 +7,13 @@
     <meta name="description" content="La Llavor Centre Ioga Gestalt">
     <meta name="author" content="www.flux.cat">
     <title>{% block title %}{% endblock %}</title>
-    {% block stylesheets %}
-        {% stylesheets '@bootstrap_less' %}
-        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
-        {% endstylesheets %}
-    {% endblock %}
-    <link href="{{ asset('bundles/fluxfrontend/css/cover.css') }}" type="text/css" rel="stylesheet" />
+    {# Twitter Bootstrap 3 #}
+    {#<!-- Latest compiled and minified CSS -->#}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {#<!-- Optional theme -->#}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    {#<!-- Latest compiled and minified JavaScript -->#}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
@@ -22,9 +23,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
 {% endblock %}
 {% if google_analytics_enabled %}
 <script>

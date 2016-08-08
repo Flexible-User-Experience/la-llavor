@@ -31,6 +31,10 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        google_analytics_enabled: %google_analytics_enabled%
+        google_analytics_account: "%google_analytics_account%"
+        admin_tag_version:        "v0.0.01"
 
 # Doctrine Configuration
 doctrine:
@@ -62,6 +66,7 @@ assetic:
     java:           "%assetic_path_java%"
     node:           "%assetic_path_node%"
     use_controller: false
+    bundles:        [ ]
     filters:
         cssrewrite: ~
         less:
