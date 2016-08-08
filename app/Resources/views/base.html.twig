@@ -8,7 +8,7 @@
     <meta name="author" content="www.flux.cat">
     <title>{% block title %}{% endblock %}</title>
     {% block stylesheets %}
-        {% stylesheets filter="cssrewrite,less" '@mycss' %}
+        {% stylesheets filter='cssrewrite,less' '@mycss' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
         {% endstylesheets %}
     {% endblock %}
