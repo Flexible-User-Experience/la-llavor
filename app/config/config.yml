@@ -3,9 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
 
-parameters:
-    locale: ca
-
+# Symfony
 framework:
     translator:      { fallbacks: [ "%locale%" ] }
     secret:          "%secret%"
@@ -15,28 +13,26 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
     templating:
         engines: [ "twig" ]
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        # handler_id set to null will use default session handler from php.ini
         handler_id:  ~
     fragments:       ~
     http_method_override: true
 
-# Twig Configuration
+# Twig
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
         google_analytics_enabled: "%google_analytics_enabled%"
         google_analytics_account: "%google_analytics_account%"
-        admin_tag_version:        "v0.0.03"
+        admin_tag_version:        "v0.0.04"
 
-# Doctrine Configuration
+# Doctrine
 doctrine:
     dbal:
         driver:   pdo_mysql
@@ -52,7 +48,7 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-# Swiftmailer Configuration
+# Swiftmailer
 swiftmailer:
     transport: "%mailer_transport%"
     host:      "%mailer_host%"
