@@ -56,3 +56,8 @@
 /Capfile
 /app/config/deploy.rb
 !/.travis.yml
+
+# Ansible
+/app/ansible/*.retry
+/app/ansible/vars/*
+!/app/ansible/vars/.gitkeep
